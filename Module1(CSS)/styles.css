@@ -1,0 +1,318 @@
+/* ===============================
+   1. General Reset & Base Styles
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('city-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #f0f0f0; /* fallback */
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ===============================
+   2. Header & Navigation
+================================= */
+#headerMain {
+  background-color: #2d3436;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header {
+  background: linear-gradient(to right, #004d99, #66ccff);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #34495e;
+  padding: 10px;
+  gap: 15px;
+}
+
+nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #1abc9c;
+}
+
+nav ul {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+}
+
+nav li {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+/* ===============================
+   3. Banner & Highlights
+================================= */
+#welcomeBannerMsg {
+  background-color: #1abc9c;
+  color: white;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+/* ===============================
+   4. Typography
+================================= */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1rem;
+  font-style: italic;
+  text-align: justify;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+}
+
+/* ===============================
+   5. Link Styling
+================================= */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #004080;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ff6600;
+}
+
+a:visited {
+  color: #800080;
+}
+
+/* ===============================
+   6. Event Cards
+================================= */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flex-item {
+  flex: 1 1 45%;
+  min-width: 200px;
+}
+
+.eventCard {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  width: 280px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.eventCard h3 {
+  font-size: 18px;
+  color: #343a40;
+  margin: 10px 0 5px;
+}
+
+.eventCard p {
+  font-size: 14px;
+  color: #495057;
+}
+
+.event-img, #event {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+/* ===============================
+   7. Forms
+================================= */
+form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #66ccff;
+}
+
+/* Specific forms */
+#eventFeedbackForm {
+  justify-content: center;
+}
+
+#eventRegistrationForm h2,
+#videoSection,
+#userPreferences,
+#geoLocationSection {
+  text-align: center;
+}
+
+/* ===============================
+   8. Tables
+================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+td img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ===============================
+   9. Multi-Column Text Layout
+================================= */
+.news-section {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  padding: 20px;
+}
+
+/* ===============================
+   10. Box Model Utilities
+================================= */
+.hidden {
+  visibility: hidden; /* takes up space */
+}
+
+.none {
+  display: none; /* no space taken */
+}
+
+/* ===============================
+   11. Footer
+================================= */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #7f8c8d;
+}
+
+/* ===============================
+   12. Responsive Design
+================================= */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header, .description, .eventCard {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .news-section {
+    column-count: 1;
+  }
+}

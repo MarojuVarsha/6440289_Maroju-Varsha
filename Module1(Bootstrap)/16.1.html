@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fixed Footer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      padding-bottom: 60px; /* prevent content overlap with footer */
+      background-color: #f8f9fa;
+    }
+    .footer {
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Page with Fixed Footer</h2>
+  <p>This page has a footer that sticks to the bottom of the viewport using Bootstrap’s <code>position-fixed</code> and <code>bottom-0</code> classes.</p>
+</div>
+
+<footer class="footer position-fixed bottom-0 start-0 end-0 bg-dark text-white d-flex justify-content-center align-items-center shadow">
+  <span>&copy; 2025 MyWebsite. All rights reserved.</span>
+</footer>
+
+</body>
+</html>

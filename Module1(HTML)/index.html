@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Event Portal</title>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header id="headerMain">
+    <h1>Community Event Portal</h1>
+  </header>
+  <nav>
+    <a href="#homeSection">Home</a>
+    <a href="#eventsSection">Events</a>
+    <a href="#contactSection">Contact</a>
+    <a href="help.html" target="_blank">Help</a>
+  </nav>
+
+  <!-- Home Section -->
+  <main>
+    <section id="homeSection">
+      <div id="welcomeBannerMsg">Welcome, User!</div>
+      <p>Don't miss out on our <span class="highlight">Special Offer</span> this week!</p>
+    </section>
+
+    <!-- Event Gallery -->
+    <section>
+      <h2>Community Event Gallery</h2>
+      <table>
+        <caption>Memories from Our Past Events</caption>
+        <tr>
+          <td><img src="Music night.jpg" alt="Music Event" title="Music Night" class="img-border" /></td>
+          <td><img src="Art festival.jpg" alt="Art Festival" title="Art Festival" class="img-border" /></td>
+          <td><img src="community walk.jpg" alt="Community Walk" title="Community Walk" class="img-border" /></td>
+        </tr>
+        <tr>
+          <td><img src="Food-drive.jpg" alt="Food Drive" title="Food Drive" class="img-border" /></td>
+          <td><img src="cleanup day.jpg" alt="Clean-up Day" title="Clean-up Day" class="img-border" /></td>
+          <td><img src="book exchange.jpg" alt="Book Exchange" title="Book Exchange" class="img-border" /></td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="registrationSection">
+      <h2>Register for an Event</h2>
+      <form id="eventRegistrationForm">
+        <label>Name: <input type="text" name="userName" placeholder="Your name" required autofocus /></label><br />
+        <label>Email: <input type="email" name="userEmail" placeholder="you@example.com" required /></label><br />
+        <label>Date: <input type="date" name="eventDate" required /></label><br />
+        <label>Event Type:
+          <select name="selectedEventType">
+            <option value="">Select</option>
+            <option value="music">Music Night</option>
+            <option value="art">Art Festival</option>
+            <option value="walk">Community Walk</option>
+            <option value="food">Food Drive</option>
+            <option value="cleanup">Cleanup Day</option>
+            <option value="book">Book Exchange</option>
+          </select>
+        </label><br />
+        <label>Message: <textarea name="userMessage"></textarea></label><br />
+        <label>Phone: <input type="text" name="userPhone" /></label><br />
+        <output id="registrationFee"></output><br />
+        <div id="registrationCharCount"></div>
+        <button type="submit">Submit</button>
+        <output id="registrationConfirmation"></output>
+      </form>
+    </section>
+
+    <!-- Event Feedback Form -->
+    <section>
+      <h2 style="text-align: center;">Event Feedback</h2>
+      <form id="eventFeedbackForm">
+        <label for="feedbackPhone">Phone Number:</label>
+        <input type="text" id="feedbackPhone" /><br /><br />
+
+        <label for="feedbackEventType">Select Event Type:</label>
+        <select id="feedbackEventType">
+          <option value="">-- Select --</option>
+          <option value="Music">Music - ₹500</option>
+          <option value="Tech">Tech - ₹300</option>
+          <option value="Art">Art - ₹400</option>
+        </select>
+        <p id="feedbackFeeDisplay">Fee: </p><br />
+
+        <label for="feedbackText">Feedback:</label><br />
+        <textarea id="feedbackText" rows="4" cols="50"></textarea><br />
+        <div id="feedbackCharCount">0 characters</div><br />
+
+        <p>Double-click the image to enlarge:</p>
+        <img src="image1.jpg" alt="event" id="feedbackEventImage" class="img-border" width="100%" height="160px" /><br /><br />
+
+        <button type="submit">Submit Feedback</button>
+        <button type="reset" id="clearPreferencesBtn">Clear Preferences</button>
+      </form>
+    </section>
+
+    <!-- Video Section -->
+    <section id="videoSection">
+      <h2>Event Promo Video</h2>
+      <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div id="videoStatus"></div>
+    </section>
+
+    <!-- Preferences -->
+    <section id="userPreferences">
+      <h2>Your Preferences</h2>
+      <button id="clearPrefsBtn">Clear Preferences</button>
+    </section>
+
+    <!-- Geolocation Section -->
+    <section id="geoLocationSection">
+      <h2>Find Nearby Events</h2>
+      <button id="btnFindNearbyEvents">Find Nearby Events</button>
+      <div id="geoLocationResult"></div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 City Council Event Portal</p>
+  </footer>
+
+</body>
+</html>
